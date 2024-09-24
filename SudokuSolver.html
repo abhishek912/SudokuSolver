@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="SudokuSolver.css">
+    <script src="SudokuSolver.js" defer></script>
+</head>
+<body>
+    <div id="loadingSpinner" class="loading-spinner"></div>
+
+    <div id="content-container">
+        <u style="color: white;"><h1>Sudoku Solver</h1></u>
+        <div class="container">
+            <div class="sudoku-grid" id="sudokuDiv"></div>
+            <div class="summary-container">
+                <h2>Last Run Summary</h2>
+                <table>
+                    <tr>
+                        <th>Start Time</th>
+                        <td id="startTime">00:00:00</td>
+                    </tr>
+                    <tr>
+                        <th>End Time</th>
+                        <td id="endTime">00:00:00</td>
+                    </tr>
+                    <tr>
+                        <th>Total Time Taken</th>
+                        <td id="totalTimeTaken">00:00:00</td>
+                    </tr>
+                    <tr>
+                        <th>Total Moves</th>
+                        <td id="totalMoves">0</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="button-container">
+            <button id="generateSudoku" style="border-radius: 20px 0px 20px 0px;" onclick="generateSudoku()">Generate Sudoku</button>
+            <button id="solveSudoku" style="border-radius: 20px 0px 20px 0px;" onclick="solveSudoku()">Solve Sudoku</button>
+            <button id="stopSolving" style="background-color: gray; border-radius: 20px 0px 20px 0px;" onclick="stopSolving()" disabled="true">Stop</button>
+        </div>
+    </div>
+</body>
+</html>

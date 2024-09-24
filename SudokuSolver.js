@@ -94,6 +94,8 @@ async function solveSudoku() {
         generateSudokuBtn.style.backgroundColor = '#007bff';
         stopBtn.disabled = true;
         stopBtn.style.backgroundColor = 'gray';
+        solveSudokuBtn.disabled = false;
+        solveSudokuBtn.style.backgroundColor = '#007bff';
 
         let endTimeLabel = document.getElementById('endTime');
         endTime = new Date();
